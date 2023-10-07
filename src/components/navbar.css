@@ -1,0 +1,14 @@
+/* .visible {
+  display: block;
+  transition: display 2s;
+  width: '100px';
+  z-index: 1000;
+  border-radius: '10px';
+}
+
+.tab1 {
+  width: '100px';
+  z-index: 1000;
+  border-radius: '10px';
+  /* display: none; */
+} */
