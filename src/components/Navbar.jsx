@@ -68,6 +68,7 @@ function Navbar() {
         position="fixed"
         width="100vw"
         fontSize="2rem"
+        zIndex="100"
       >
         <Box component="img" src={logo} height="3.7rem" />
 
@@ -153,17 +154,6 @@ function Navbar() {
 
               {/* ///////////////////////////////////2 */}
               <Menu
-                // sx={{
-                //   width: '100px',
-                //   display: 'block',
-                //   // top: '100px',
-                //   zIndex: 1000,
-                //   backgroundColor: `${dark}`,
-
-                //   borderRadius: '10px',
-                //   left: '100px',
-                //   // position: 'absolute',
-                // }}
                 id="tab2"
                 anchorEl={tab2}
                 anchorOrigin={{

@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   const mode = useSelector((state) => state.mode)
@@ -21,6 +22,7 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Footer />} /> */}
       </Route>,
     ),
   )

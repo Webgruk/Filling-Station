@@ -1,0 +1,351 @@
+.mainDiv {
+  background: url('../assets/images/ap-station-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.welcomeTxt > div {
+  text-align: center;
+  width: 40%;
+}
+.container {
+  padding: 5rem;
+}
+.flexItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+
+  margin: auto;
+  padding: 5rem 0 2rem 0;
+}
+
+.flexItems > div {
+  flex: 1;
+  flex-basis: 250px;
+  max-width: 350px;
+  min-width: 300px;
+  color: white;
+  /* max-width: 400px;
+  min-width: 300px; */
+  max-height: 500px;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.discover {
+  width: fit-content;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding-top: 5rem;
+}
+.discover2 {
+  width: fit-content;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.icons {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem auto 2rem;
+}
+
+.icons .box {
+  width: 7rem;
+}
+
+@media screen and (max-width: 867px) {
+  .icons .box {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 613px) {
+  .icons .box {
+    width: 3rem;
+  }
+}
+
+.container2 {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+
+.left {
+  background-image: url('../assets/images/stat-doodle.jpg');
+  width: 50%;
+  height: 100%;
+}
+
+.sub {
+  background: rgba(47, 57, 31, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 7rem 0;
+}
+
+.right {
+  background: url('../assets/images/ap-station-1.jpg');
+  width: 50%;
+  /* height: 100%; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.listItem {
+  font-size: 0.95rem;
+  line-height: 2rem;
+}
+
+.listItem > li {
+  transition: text-align 6s ease;
+  font-size: larger;
+  margin: 1rem;
+}
+
+li:hover > span {
+  transform: skewX(20deg);
+  display: block;
+  width: fit-content;
+}
+
+.active1 {
+  background-color: green;
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.active1 > span {
+  transform: skewX(20deg) !important;
+  display: block;
+}
+.active2 {
+  background-color: rgb(98, 98, 244);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.active2 > span {
+  transform: skewX(20deg) !important;
+  display: block;
+}
+.active3 {
+  background-color: orange;
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.active3 > span {
+  transform: skewX(20deg) !important;
+  display: block;
+}
+.active4 {
+  background-color: rgb(159, 159, 7);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.active4 > span {
+  transform: skewX(20deg) !important;
+  display: block;
+}
+.active5 {
+  background-color: rgb(62, 101, 5);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.active5 > span {
+  transform: skewX(20deg) !important;
+  display: block;
+}
+
+.list1:hover {
+  background-color: green;
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+
+.list2:hover {
+  background-color: blue;
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+
+.list3:hover {
+  background-color: rgb(255, 165, 0);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.list4:hover {
+  background-color: rgb(159, 159, 7);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+.list5:hover {
+  /* background-color: rgb(103, 126, 67); */
+  background-color: rgb(47, 57, 31);
+  font-weight: bold;
+  transform: skewX(-20deg);
+  text-align: center;
+}
+
+.title {
+  background-color: green;
+  font-size: 2rem;
+  padding: 0.3rem;
+  transform: skewX(-20deg);
+  width: fit-content;
+  text-align: center;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.title > span {
+  transform: skewX(20deg) !important;
+  display: block;
+  padding: 8px;
+}
+
+.container4 {
+  background: url('../assets/images/stat-doodle.jpg');
+  /* background-size: contain; */
+  height: 50vh;
+  background-position: center;
+}
+
+.outterDiv {
+  width: 40%;
+  height: 70%;
+  border-radius: 20px;
+}
+.innerImg {
+  background: url('../assets/images/gallery-img/gallery-2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+
+  background-repeat: no-repeat;
+}
+.dark {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5rem;
+  color: white;
+  position: relative;
+}
+
+.readMore {
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  z-index: 100;
+  align-items: center;
+}
+
+.visible {
+  visibility: visible;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  align-items: center;
+}
+
+.truncate {
+  --max-lines: 3;
+  --line-height: 1.4rem; /* Set your desired line height */
+  max-height: calc(var(--line-height) * var(--max-lines));
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
+  position: relative;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.outterDiv2 {
+  height: 70%;
+  width: 40%;
+  display: flex;
+}
+
+.textContainer {
+  width: 60%;
+  background-color: rgb(239, 237, 237);
+  border-radius: 20px 0px 0px 20px;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image {
+  width: 40%;
+}
+
+.textImage {
+  width: 100%;
+  border-radius: 0px 20px 20px 0px;
+
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 975px) {
+  .sub {
+    flex-direction: column;
+  }
+  .container2 {
+    /* flex-direction: column; */
+    display: block;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .outterDiv2 {
+    display: none;
+  }
+
+  .outterDiv {
+    width: 80%;
+  }
+}
