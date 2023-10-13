@@ -1,14 +1,11 @@
-/* .visible {
-  display: block;
-  transition: display 2s;
-  width: '100px';
-  z-index: 1000;
-  border-radius: '10px';
+.active {
+  border-bottom: 2px solid blue;
 }
 
-.tab1 {
-  width: '100px';
-  z-index: 1000;
-  border-radius: '10px';
-  /* display: none; */
-} */
+.nav-link {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+}
