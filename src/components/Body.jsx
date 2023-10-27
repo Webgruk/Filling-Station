@@ -12,15 +12,12 @@ import iconFour from '../assets/images/business-icons/Lubricants-Yellow.png'
 import icon5 from '../assets/images/business-icons/Makg-n-Distrbtn.png'
 import iconFive from '../assets/images/business-icons/Makg-n-Distrbtn-Yellow.png'
 
-import textImage from '../assets/images/gallery-img/gallery-1.jpg'
-
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 
 import './body.css'
 import { useState } from 'react'
 import Footer from './Footer'
-import Speeddial from './Speeddail'
 
 import { data1, data2 } from '../utils/data'
 import { useIterator } from '../utils/useIterater'
