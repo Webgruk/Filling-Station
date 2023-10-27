@@ -14,9 +14,18 @@ import iconFive from '../assets/images/business-icons/Makg-n-Distrbtn-Yellow.png
 
 import textImage from '../assets/images/gallery-img/gallery-1.jpg'
 
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+
 import './body.css'
 import { useState } from 'react'
 import Footer from './Footer'
+import Speeddial from './Speeddail'
+
+import { data1, data2 } from '../utils/data'
+import { useIterator } from '../utils/useIterater'
+import { motion } from 'framer-motion'
+
 function Body() {
   const theme = useTheme()
   const [isHovered1, setIsHovered1] = useState(false)
@@ -82,6 +91,9 @@ function Body() {
   const iconIV = isHovered4 ? iconFour : icon4
   const iconV = isHovered5 ? iconFive : icon5
 
+  const [{ title, photo }, prev, next] = useIterator(data1)
+  const [{ title2, summary2, photo2 }, prev2, next2] = useIterator(data2)
+
   return (
     <div>
       {/* first section */}
@@ -92,7 +104,11 @@ function Body() {
           }}
         >
           <div className="container">
-            <div className="welcomeTxt">
+            <motion.div
+              whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="welcomeTxt"
+            >
               <Typography variant="h1" sx={{ textAlign: 'center' }}>
                 Welcome to Ardova Plc
               </Typography>
@@ -101,10 +117,12 @@ function Body() {
                 Africa, providing Nigerians with cleaner alternative sources
                 that meet their basic needs.
               </Typography>
-            </div>
+            </motion.div>
 
             <div className="flexItems">
-              <div
+              <motion.div
+                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                transition={{ duration: 0.5 }}
                 style={{
                   backgroundColor: 'black',
                 }}
@@ -121,8 +139,10 @@ function Body() {
                   distribution of Premium Motor Spirit (PMS), Dual Purpose
                   Kerosene (DPK), Diesel (AGO) and Liquefied Natural Gas (LPG).
                 </Typography>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
+                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                transition={{ duration: 0.5 }}
                 style={{
                   backgroundColor: 'orange',
                 }}
@@ -138,8 +158,10 @@ function Body() {
                   solutions to provide Nigerians with affordable energy sources
                   to meet their basic lighting needs.
                 </Typography>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
+                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                transition={{ duration: 0.5 }}
                 style={{
                   backgroundColor: 'forestgreen',
                 }}
@@ -157,7 +179,7 @@ function Body() {
                   high-quality lubricants for automotive and industrial
                   lubricant needs.
                 </Typography>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -180,7 +202,11 @@ function Body() {
               Discover Our Businesses
             </Typography>
           </div>
-          <div className="icons">
+          <motion.div
+            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: 0.5 }}
+            className="icons"
+          >
             <Box
               onClick={() => setCurrentIcon('Energy')}
               component="img"
@@ -221,7 +247,7 @@ function Body() {
               onMouseOut={handleMouseOut5}
               className="box"
             />
-          </div>
+          </motion.div>
           <div className="discover2">
             <Typography
               variant="h1"
@@ -526,15 +552,25 @@ function Body() {
             gap: '30px',
           }}
         >
-          <div className="outterDiv">
-            <div className="innerImg">
+          <motion.div
+            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: 0.5 }}
+            className="outterDiv"
+          >
+            <div
+              className="innerImg"
+              style={{
+                background: `url(${photo})`,
+                backgroundColor: 'black',
+              }}
+            >
               <div className="dark" onMouseEnter={() => setMouseEnter(true)}>
                 <div>
                   <Typography sx={{ fontSize: '.8rem' }}>
                     LATEST NEWS
                   </Typography>
                   <Typography sx={{ fontSize: '1.5rem', marginTop: '20px' }}>
-                    Ardova Bond Insuance
+                    {title}
                   </Typography>
                 </div>
                 <div>
@@ -548,9 +584,10 @@ function Body() {
                     by an indigenous oil and gas company in the history of the
                     Nigerian debt capital markets
                   </p>
-                  <Typography variant="h5" sx={{ paddingTop: '10px' }}>
-                    Nov, 2021
-                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{ paddingTop: '10px' }}
+                  ></Typography>
                 </div>
                 <div
                   className={mouseEnter ? 'visible' : 'readMore'}
@@ -560,10 +597,22 @@ function Body() {
                     Read More
                   </Button>
                 </div>
+                <div className="caret">
+                  <div onClick={prev}>
+                    <KeyboardArrowLeftIcon />
+                  </div>
+                  <div onClick={next}>
+                    <KeyboardArrowRightIcon />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="outterDiv2">
+          </motion.div>
+          <motion.div
+            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: 0.5 }}
+            className="outterDiv2"
+          >
             <div className="textContainer">
               <div>
                 <Typography sx={{ fontSize: '.8rem', color: 'green' }}>
@@ -572,19 +621,12 @@ function Body() {
                 <Typography
                   sx={{ fontSize: '1.5rem', marginTop: '20px', color: 'green' }}
                 >
-                  Arden & Newton/Ardova Global Award: A win for Nigeria
+                  {title2}
                 </Typography>
               </div>
               <div>
                 <p className="truncate" style={{ color: 'green' }}>
-                  LAGOS, NIGERIA – 16 November 2021 – Ardova Plc (“Ardova” or
-                  the “Company”) is pleased to announce the successful
-                  completion of a N25.3 billion Series 1 (Tranche A and Tranche
-                  B) Fixed Rate Senior Unsecured Bond Issue (“the “Bond Issue”)
-                  under its N60 billion Debt Issuance Programme. The Bond Issue
-                  is the largest local currency bond issuance by an indigenous
-                  oil and gas company in the history of the Nigerian debt
-                  capital markets
+                  {summary2}
                 </p>
                 <Typography
                   variant="h5"
@@ -595,17 +637,28 @@ function Body() {
               </div>
             </div>
             <div className="image">
-              <img src={textImage} alt="" className="textImage" />
+              <img src={photo2} alt="" className="textImage" />
+              <div className="caret">
+                <div onClick={prev2}>
+                  <KeyboardArrowLeftIcon />
+                </div>
+                <div onClick={next2}>
+                  <KeyboardArrowRightIcon />
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* fifth section */}
 
-      <div>
+      <motion.div
+        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: 0.5 }}
+      >
         <Footer />
-      </div>
+      </motion.div>
     </div>
   )
 }

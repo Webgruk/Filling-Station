@@ -8,10 +8,7 @@ import {
   ListItemText,
   ListItem,
   Divider,
-  Tabs,
-  Tab,
   IconButton,
-  Menu,
 } from '@mui/material'
 import FlexBetween from '../utils/FlexBetween'
 
@@ -40,6 +37,7 @@ function Navbar() {
   }
 
   const dark = theme.palette.background.alt
+  const mode = theme.palette.mode
   return (
     <div>
       <FlexBetween
@@ -66,13 +64,13 @@ function Navbar() {
                   style={{
                     padding: '0rem 2rem',
                     textDecoration: 'none',
-                    color: 'white',
+                    color: mode === 'light' ? 'black' : 'white',
                     fontSize: '1.5rem',
                   }}
                 >
                   Home
                 </Link>
-                {visible === 'tab1' ? (
+                {/* {visible === 'tab1' ? (
                   <div className="dropdown">
                     <List sx={{ background: `${dark}` }}>
                       <ListItem disablePadding>
@@ -92,7 +90,7 @@ function Navbar() {
                       </ListItem>
                     </List>
                   </div>
-                ) : null}
+                ) : null} */}
               </div>
               <div
                 className="nav-link"
@@ -104,7 +102,8 @@ function Navbar() {
                   style={{
                     padding: '0rem 2rem',
                     textDecoration: 'none',
-                    color: 'white',
+                    color: mode === 'light' ? 'black' : 'white',
+
                     fontSize: '1.5rem',
                   }}
                 >
@@ -112,21 +111,35 @@ function Navbar() {
                 </Link>
                 {visible === 'tab2' ? (
                   <div className="dropdown">
-                    <List sx={{ background: `${dark}` }}>
-                      <ListItem disablePadding>
+                    <List sx={{ background: `${dark}`, width: '200px' }}>
+                      <ListItem>
                         <ListItemButton>
-                          <ListItemText primary="List item 1" />
+                          <ListItemText primary="Ap lubricants" />
                         </ListItemButton>
                       </ListItem>
                       <Divider />
                       <ListItem>
-                        <ListItemText
-                          primary="List item 2"
-                          secondary="Secondary text"
-                        />
+                        <ListItemButton>
+                          <ListItemText primary="shell lubricants" />
+                        </ListItemButton>
                       </ListItem>
+                      <Divider />
                       <ListItem>
-                        <ListItemText primary="List item 3" />
+                        <ListItemButton>
+                          <ListItemText primary="Liquified Petrol Gas" />
+                        </ListItemButton>
+                      </ListItem>
+                      <Divider />
+                      <ListItem>
+                        <ListItemButton>
+                          <ListItemText primary="Renewable Energy" />
+                        </ListItemButton>
+                      </ListItem>
+                      <Divider />
+                      <ListItem>
+                        <ListItemButton>
+                          <ListItemText primary="Air Ap (Aviation)" />
+                        </ListItemButton>
                       </ListItem>
                     </List>
                   </div>

@@ -6,7 +6,7 @@ import lube from '../assets/images/ap-lubes.jpg'
 import tank from '../assets/images/air-ap.png'
 import gallon from '../assets/images/shell-lubes.jpg'
 import station from '../assets/images/ap-station-2.jpg'
-
+import { motion } from 'framer-motion'
 function Products() {
   return (
     <div>
@@ -16,7 +16,9 @@ function Products() {
         {/* first section */}
         <div className="backgroud">
           <div className="darks">
-            <Typography sx={{ fontSize: '3rem', fontWeight: '700' }}>
+            <Typography
+              sx={{ fontSize: '3rem', fontWeight: '700', color: 'white' }}
+            >
               Our Products
             </Typography>
           </div>
@@ -200,7 +202,13 @@ function Products() {
           </div>
         </div>
       </div>
-      <Footer />
+
+      <motion.div
+        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: 1 }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   )
 }
